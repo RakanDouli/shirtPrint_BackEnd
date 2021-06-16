@@ -13,6 +13,10 @@ module.exports = (sequelize, DataTypes) => {
         through: "wishlists",
         foreignKey: "productId",
       });
+      product.belongsToMany(models.order, {
+        through: "order_product_items",
+        foreignKey: "orderId",
+      });
     }
   }
   product.init(
