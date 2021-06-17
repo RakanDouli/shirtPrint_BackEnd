@@ -67,6 +67,7 @@ router.patch("/:id", async (req, res) => {
 });
 
 /// add new product
+
 router.post("/", auth, async (req, res) => {
   try {
     const { title, imageurl, tags, description, cost, addedcost } = req.body;

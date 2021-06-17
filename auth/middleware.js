@@ -16,16 +16,13 @@ async function auth(req, res, next) {
   try {
     const data = toData(auth[1]);
     const user = await User.findByPk(data.userId);
-    // const designer = await Designer.findByPk(data.designerId);
-    if (!user) {
-      return res.status(404).send({ message: "User does not exist" });
+    const designer = await Designer.findByPk(data.designerId);
+    if (!user && !designer) {
+      return res.status(404).send({ message: "Membership does not exist" });
     }
-    // if (!designer) {
-    //   return res.status(404).send({ message: "Designer does not exist" });
-    // }
 
     // add user object to request
-    // req.designer = designer;
+    req.designer = designer;
     req.user = user;
     // next handler
     return next();
