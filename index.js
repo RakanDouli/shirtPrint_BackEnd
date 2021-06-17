@@ -151,7 +151,8 @@ app.post("/authorized_post_request", authMiddleWare, (req, res) => {
 });
 
 app.use("/", authRouter);
-
+const productsRouter = require("./routers/products");
+app.use("/products", productsRouter);
 // Listen for connections on specified port (default is port 4000)
 
 app.listen(PORT, () => {
