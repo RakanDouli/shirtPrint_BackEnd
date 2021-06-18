@@ -13,7 +13,7 @@ module.exports = {
       where: { title: "Abstract" },
     });
     const product2 = await Product.findOne({
-      where: { title: "Stay focus" },
+      where: { title: "Christmas" },
     });
     await queryInterface.bulkInsert(
       "wishlists",

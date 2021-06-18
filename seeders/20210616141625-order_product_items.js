@@ -6,10 +6,10 @@ module.exports = {
       where: { title: "Abstract" },
     });
     const product2 = await Product.findOne({
-      where: { title: "Stay focus" },
+      where: { title: "Christmas" },
     });
     const product3 = await Product.findOne({
-      where: { title: "Wave i am comming" },
+      where: { title: "Water Color" },
     });
     await queryInterface.bulkInsert(
       "order_product_items",

@@ -15,9 +15,9 @@ module.exports = {
         {
           title: "Abstract",
           tags: "#art, #Abstract, #colorful",
-          description: "This painting is designed after the move Lion King",
+          description: "This painting is designed after the move Art",
           imageurl:
-            "https://img.favpng.com/4/15/15/african-elephant-t-shirt-watercolor-painting-png-favpng-XkM9hxT2hDvgrvSH7yNJs738R_t.jpg",
+            "https://shirtprint.netlify.app/img/vectorstock_204-removebg-preview.png",
           cost: 30,
           addedcost: 4,
           createdAt: new Date(),
@@ -25,11 +25,10 @@ module.exports = {
           designerId: designer1.id,
         },
         {
-          title: "Stay focus",
-          tags: "#3DPrint, #Foucus",
-          description: "This painting is designed With 3rd technology ",
-          imageurl:
-            "https://i.pinimg.com/474x/d6/61/f9/d661f9f50e0e82f765be4b696e991a5d.jpg",
+          title: "Christmas",
+          tags: "#SuperMan, #Santa",
+          description: "This painting is designed Christmas superheros",
+          imageurl: "https://shirtprint.netlify.app/img/3.png",
           cost: 30,
           addedcost: 9,
           createdAt: new Date(),
@@ -37,11 +36,10 @@ module.exports = {
           designerId: designer1.id,
         },
         {
-          title: "Wave i am comming",
-          tags: "#Dragon, #Wave, #Fire",
-          description: "This one is designed for people who suffer from heat",
-          imageurl:
-            "https://icon2.cleanpng.com/20180202/vge/kisspng-printed-t-shirt-gift-spreadshirt-vector-monster-t-shirt-printing-5a7444031e7a65.3468008415175690271249.jpg",
+          title: "Statue of librity",
+          tags: "#Statue, #Librity, #4ofjuly",
+          description: "This one is designed for people to celebrate 4 of july",
+          imageurl: "https://shirtprint.netlify.app/img/Artboard38.png",
           cost: 30,
           addedcost: 5,
           createdAt: new Date(),
@@ -49,14 +47,38 @@ module.exports = {
           designerId: designer2.id,
         },
         {
-          title: "CowBoy",
-          tags: "#cowboy, #western, #vintage",
+          title: "Water Color",
+          tags: "#art, #abstract, #creative",
           description:
-            "This painting is made for people who love western movies",
+            "This painting is made for creative artists who can go out of the box",
           imageurl:
-            "https://banner2.cleanpng.com/20180208/qqe/kisspng-printed-t-shirt-clothing-sleeve-t-shirt-printing-5a7c4af448e068.1129056915180950922985.jpg",
+            "https://shirtprint.netlify.app/img/vectorstock_21176167-removebg-preview.png",
           cost: 30,
           addedcost: 10,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+          designerId: designer2.id,
+        },
+        {
+          title: "The Day of the dead",
+          tags: "#Skull, #Mexican, #2november",
+          description:
+            "Day of the Dead is celebrated in Mexico between October 31st and November 2nd.",
+          imageurl: "https://shirtprint.netlify.app/img/4.png",
+          cost: 30,
+          addedcost: 7,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+          designerId: designer2.id,
+        },
+        {
+          title: "Cute dog",
+          tags: "#dogs, #animals, #love",
+          description: "lovely cure animated brown dog with lots of hearts",
+          imageurl:
+            "https://shirtprint.netlify.app/img/vectorstock_33820488-removebg-preview.png",
+          cost: 30,
+          addedcost: 8,
           createdAt: new Date(),
           updatedAt: new Date(),
           designerId: designer2.id,
