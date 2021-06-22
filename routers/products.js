@@ -12,7 +12,7 @@ router.get("/", async (req, res) => {
       include: [Designer],
     });
 
-    res.status(200).send({ products });
+    res.status(200).send({ message: "ok", products });
   } catch (e) {
     next(e);
   }
