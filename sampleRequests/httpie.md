@@ -63,5 +63,5 @@ http POST :4000/authorized_post_request Authorization:"Bearer <PASTE_YOUR_TOKEN_
 ```
 
 ```bash
-http POST :4000/products/ Authorization:"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXNpZ25lcklkIjoyLCJpYXQiOjE2MjQ0OTU4MzksImV4cCI6MTYyNDUwMzAzOX0.m3f7PPclY-UNI9jMI_2NT49PluMopOPyU5gDq099HCc" title="ss" imageurl="ss" tags"sss" description="sss" cost=30 addedcost=3
+http POST :4000/products/ Authorization:"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImlhdCI6MTYyNDU3Mzc3NCwiZXhwIjoxNjI0NTgwOTc0fQ.HWkSJ0oT7pjZx8KoiNGR89UTx1VIM01QWO4V9vQZy8E" title="ss" imageurl="ss" tags"sss" description="sss" cost=30 addedcost=3
 ```
