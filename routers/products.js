@@ -70,9 +70,9 @@ router.patch("/:id", async (req, res) => {
 
 router.post("/", auth, async (req, res) => {
   try {
-    const { title, imageurl, tags, description, cost, addedcost } = req.body;
+    const { title, imageurl, tags, description, addedcost } = req.body;
 
-    if (!title || !imageurl || !tags || !description || !cost || !addedcost) {
+    if (!title || !imageurl || !tags || !description || !addedcost) {
       return res
         .status(400)
         .send({ message: "Oops not all fields are filled" });
@@ -83,7 +83,7 @@ router.post("/", auth, async (req, res) => {
       imageurl,
       tags,
       description,
-      cost,
+      cost: 30,
       addedcost,
       designerId: req.designer.id,
     });

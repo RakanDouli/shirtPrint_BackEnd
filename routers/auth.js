@@ -37,6 +37,7 @@ router.post("/user/login", async (req, res, next) => {
 
 router.post("/user/signup", async (req, res) => {
   const { email, password, name, adress } = req.body;
+
   if (!email || !password || !name || !adress) {
     return res.status(400).send("Please provide an email, password and a name");
   }
@@ -131,6 +132,12 @@ router.post("/designer/signup", async (req, res) => {
 
     return res.status(400).send({ message: "Something went wrong, sorry" });
   }
+});
+
+router.get("/designer/me", authMiddleware, async (req, res) => {
+  // don't send back the password hash
+  delete req.designer.dataValues["password"];
+  res.status(200).send({ ...req.designer.dataValues });
 });
 //
 module.exports = router;
