@@ -65,3 +65,9 @@ http POST :4000/authorized_post_request Authorization:"Bearer <PASTE_YOUR_TOKEN_
 ```bash
 http POST :4000/products/ Authorization:"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImlhdCI6MTYyNDU3Mzc3NCwiZXhwIjoxNjI0NTgwOTc0fQ.HWkSJ0oT7pjZx8KoiNGR89UTx1VIM01QWO4V9vQZy8E" title="ss" imageurl="ss" tags"sss" description="sss" cost=30 addedcost=3
 ```
+
+```bash
+http POST :4000/orderproductitems/ Authorization:"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImlhdCI6MTYyNDU3NTQwOSwiZXhwIjoxNjI0NTgyNjA5fQ.Qja-kczB6XMxO6ybgIuizrQSDNvQUpIz5Dj-doik9hc" size="S" color="Black" quantity="1" productId="1"
+```
+
+http POST :4000/orderproductitems/ Authorization:"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImlhdCI6MTYyNDU3NjYzNSwiZXhwIjoxNjI0NTgzODM1fQ.1BbRzeLdhM2VHlezzTH8AV4wZVJsl8IOqyca6Q63XJU" size="L" color="black" type="short sleeve" quantity=1 productId=1
