@@ -9,7 +9,7 @@ const router = new Router();
 router.get("/", async (req, res) => {
   try {
     const order_product_items = await Order_product_items.findAll({
-      //   include: [Order],
+      include: [Product],
     });
     console.log(order_product_items);
     res.status(200).send({ message: "ok", order_product_items });
@@ -41,6 +41,7 @@ router.post("/", auth, async (req, res) => {
     });
     return res.status(201).send({
       message: "new order-product-items created",
+      ...order_product_items,
     });
   } catch (e) {
     console.log(e.message);
