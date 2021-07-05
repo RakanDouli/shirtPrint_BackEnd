@@ -44,16 +44,20 @@ router.get("/:id", async (req, res) => {
 });
 
 //to update product
-router.patch("/:id", async (req, res) => {
+router.patch("/:id", auth, async (req, res) => {
   try {
-    const product = await Product.findByPk(req.params.id);
-    if (!product) {
-      return res.status(404).send("Product doesn't exist");
-    }
-    const { title, imageurl, tags, description, cost, addedcost } = req.body;
+    const id = req.params.id;
+    const product = await Product.findByPk(id);
+    console.log(product);
+    // if (!product) {
+    //   return res.status(404).send("Product doesn't exist");
+    // }
+    const { title, tags, description, addedcost } = req.body;
+    const cost = 30;
+
     await product.update({
       title,
-      imageurl,
+
       tags,
       description,
       cost,
@@ -62,7 +66,7 @@ router.patch("/:id", async (req, res) => {
 
     return res.status(200).send({ product });
   } catch (e) {
-    next(e);
+    console.log(e.message);
   }
 });
 
