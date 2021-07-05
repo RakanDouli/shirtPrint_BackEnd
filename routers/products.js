@@ -49,9 +49,9 @@ router.patch("/:id", auth, async (req, res) => {
     const id = req.params.id;
     const product = await Product.findByPk(id);
     console.log(product);
-    // if (!product) {
-    //   return res.status(404).send("Product doesn't exist");
-    // }
+    if (!product) {
+      return res.status(404).send("Product doesn't exist");
+    }
     const { title, tags, description, addedcost } = req.body;
     const cost = 30;
 
@@ -94,6 +94,18 @@ router.post("/", auth, async (req, res) => {
     return res.status(201).send({ message: "new product created", product });
   } catch (e) {
     next(e);
+  }
+});
+// delete
+router.delete("/:id", auth, async (req, res, next) => {
+  const id = req.params.id;
+  try {
+    const deleteProduct = await Product.findByPk(id);
+    console.log(deleteProduct);
+    await deleteProduct.destroy();
+    res.send("product Deleted", deleteProduct);
+  } catch (e) {
+    console.log(e.deleted);
   }
 });
 
