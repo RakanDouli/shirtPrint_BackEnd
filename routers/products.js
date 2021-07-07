@@ -63,8 +63,8 @@ router.patch("/:id", auth, async (req, res) => {
       cost,
       addedcost,
     });
-
-    return res.status(200).send({ product });
+    // const updatedProduct = await Product.findAll({ where: { id } });
+    return res.status(200).send(product);
   } catch (e) {
     console.log(e.message);
   }
